@@ -143,7 +143,7 @@ const Navbar = () => {
     ))
 
   return (
-    <header className="fixed top-0 bg-main-navbar left-0 right-0 z-50 py-2 px-5 lg:px-10">
+    <header className="top-0 bg-main-navbar left-0 right-10 z-50 py-2 px-5 lg:px-10">
       <nav className="flex w-full max-w-screen-xl mx-auto items-center justify-between">
         {/* Left side - Cat Icon */}
         <div className="flex items-center pt-2">
@@ -159,7 +159,7 @@ const Navbar = () => {
 
         {/* Mobile Toggle - Far Right */}
         {isMobileView && (
-          <div className="ml-auto">
+          <div className="pr-10 sm:pr-10">
             <button
               className="text-black"
               onClick={() => setIsMobileOpen(prev => !prev)}
