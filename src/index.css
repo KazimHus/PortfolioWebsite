@@ -5,6 +5,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 .text-bright-yellow {
   color: #FFF01F;
 }
@@ -47,7 +70,6 @@ html {
   font-style: normal;
 }
 
-
 .texturina-text{
   font-family: "Texturina", serif;
   font-optical-sizing: auto;
@@ -80,5 +102,3 @@ html {
   font-weight: 800;
   font-style: normal;
 }
-
-
