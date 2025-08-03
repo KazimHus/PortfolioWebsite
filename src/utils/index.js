@@ -66,6 +66,9 @@ export const pin = Pin
 import Celebration from "/assets/icons/celebration.gif"
 export const celebration = Celebration
 
+import Caticon from "/assets/icons/caticon.png"
+export const caticon  = Caticon 
+
 
 
 

@@ -21,9 +21,9 @@ gsap.registerPlugin(ScrollTrigger)
 
 const visuals = [
   <img id="visual-0" src={unitygame} className="visual w-full h-[200px] sm:w-[80%] sm:h-[90%] object-cover rounded-xl sm:ml-10" />,
-  <div id="visual-1" className="visual grid grid-cols-3 gap-2 p-2 w-[600px] h-[380px] sm:w-[550px] sm:h-[80%] sm:mr-10">
+  <div id="visual-1" className="visual grid grid-cols-2 sm:grid-cols-3 gap-2 p-2 w-[380px] h-[400px] sm:w-[550px] sm:h-[80%] sm:mr-10">
     <img src={fries} alt="Fries App" className="rounded-md object-cover w-full h-full" />
-    <img src={home} alt="Home Screen" className="rounded-md object-cover w-full h-full" />
+    <img src={home} alt="Home Screen" className="rounded-md object-cover w-full h-full hidden sm:block" />
     <img src={personal} alt="Personal UI" className="rounded-md object-cover w-full h-full" />
   </div>,
   <img id="visual-2" src={youtubepic} alt="YouTube Project" className="visual w-full h-[200px] sm:w-[80%] sm:h-[90%] object-cover rounded-xl sm:ml-10" />,
