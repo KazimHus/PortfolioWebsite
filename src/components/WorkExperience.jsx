@@ -29,7 +29,7 @@ const WorkExperience = () => {
 
   return (
     <section id="workexperience" className="text-black bg-main px-14 lg:px-5 pt-36 pb-20">
-     <div className="text-center mb-24 sm:mb-28">
+     <div className="text-center mb-24 sm:mb-36">
       <h1 className="text-4xl sm:text-5xl lg:text-6xl gugi-regular text-main">Work Experience</h1>
       <div className="w-16 sm:w-24 h-1 bg-bright-orange mx-auto mt-4 mb-6 rounded-full" />
     </div>

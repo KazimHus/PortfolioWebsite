@@ -86,7 +86,7 @@ const Navbar = () => {
       
       // Custom offsets for specific sections
       if (link === 'workexperience') {
-        offset = 50 // scroll higher up for these sections
+        offset = 10 // scroll higher up for these sections
       }
 
       if (link === 'hobbies') {
