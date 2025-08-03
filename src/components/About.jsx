@@ -31,7 +31,7 @@ const About = () => {
         <div className="flex flex-col lg:text-left">
           <div>
             <div className="text-left px-8 py-2 text-lg md:text-2xl techno-text text-main bg-accent/70 border border-accent/40 rounded-full inline-block mb-4">
-              Hello! I'm
+              Hello! I am
             </div>
             <h1 className="text-center lg:text-left text-4xl md:text-5xl lg:text-6xl gugi-regular leading-tight">
               Mirza Kazim Husain,
