@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-bright-yellow {
+  color: #FFF01F;
+}
+
+.text-bright-orange {
+  color: #d17402;
+}
+
+.bg-bright-orange {
+  background-color: #d17402;
+}
+
+.bg-container-grey {
+  background-color: #f0eae6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.glow {
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
+}
+
+.text-main {
+    color:#02084e;
+}
+
+.bg-main {
+  background-color: #fffbf3;
+}
+
+.bg-main-navbar {
+  background-color: #fffbf3;
+}
+
+.pirata-one-regular {
+  font-family: "Pirata One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.texturina-text{
+  font-family: "Texturina", serif;
+  font-optical-sizing: auto;
+  font-weight: 400; 
+  font-style: normal;
+}
+
+.texturina-text-bold{
+  font-family: "Texturina", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.techno-text{
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gugi-regular {
+  font-family: "Gugi", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.techno-text-bold{
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+
