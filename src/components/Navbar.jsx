@@ -146,7 +146,7 @@ const Navbar = () => {
     <header className="fixed top-0 bg-main-navbar left-0 right-0 z-50 py-2 px-2 lg:px-10">
       <nav className="flex w-full max-w-screen-xl mx-auto items-center justify-between">
         {/* Left side - Cat Icon */}
-        <div className="flex items-center pt-2">
+        <div className="flex items-center pt-1 ml-2">
           <img src={caticon} alt="Cat Icon" className="w-10 h-12 lg:w-10 lg:h-15" />
         </div>
 
