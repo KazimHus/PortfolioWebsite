@@ -160,7 +160,7 @@ useEffect(() => {
 }, [showModal])
 
   return (
-    <section id="projects" className="bg-main text-black px-4 sm:px-8 lg:px-36 py-10 pt-16 sm:pt-32">
+    <section id="projects" className="bg-main text-black px-4 sm:px-8 lg:px-36 py-10 pt-28 sm:pt-32">
       <div className="text-center mb-1 sm:mb-12">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl gugi-regular text-main">Personal Projects</h1>
         <div className="w-16 sm:w-24 h-1 bg-bright-orange mx-auto mt-4 mb-6 rounded-full" />

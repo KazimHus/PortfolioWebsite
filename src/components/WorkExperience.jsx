@@ -48,7 +48,7 @@ const WorkExperience = () => {
   return (
     <section
       id="workexperience"
-      className="text-black bg-main px-14 lg:px-5 pt-36 pb-20"
+      className="text-black bg-main px-14 lg:px-5 sm:pt-36 pt-28 pb-20"
     >
       <div className="text-center mb-24 sm:mb-32">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl gugi-regular text-main">
