@@ -40,119 +40,124 @@ const Projects = () => {
   const modalRef = useRef(null)
   const imageRef = useRef(null)
 
-  useEffect(() => {
-    if (showModal && modalRef.current) {
-      gsap.fromTo(
-        modalRef.current,
-        { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }
-      )
+  // 🔁 GSAP animation logic: run ONCE
+useEffect(() => {
+  const visualsEls = document.querySelectorAll(".visual")
+  visualsEls.forEach((el) => {
+    const handleMouseEnter = () => {
+      gsap.to(el, {
+        scale: 1.05,
+        duration: 0.3,
+        ease: "power2.out",
+      })
+    }
+    const handleMouseLeave = () => {
+      gsap.to(el, {
+        scale: 1,
+        duration: 0.3,
+        ease: "power2.out",
+      })
+    }
+    el.addEventListener("mouseenter", handleMouseEnter)
+    el.addEventListener("mouseleave", handleMouseLeave)
+    el._gsapHandlers = { handleMouseEnter, handleMouseLeave }
+  })
+
+  const iconElements = document.querySelectorAll(".project-icon")
+  iconElements.forEach((el) => {
+    const tooltip = el.querySelector(".custom-tooltip")
+    const handleMouseEnter = () => {
+      gsap.to(el.querySelector("img"), {
+        scale: 1.15,
+        duration: 0.2,
+        ease: "power2.out",
+      })
+      if (tooltip) {
+        gsap.fromTo(
+          tooltip,
+          { opacity: 0, y: 5, scale: 0.9 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.2, ease: "power2.out" }
+        )
+      }
     }
 
-    if (showModal) {
-      setZoomLevel(1)
-      setPanPosition({ x: 0, y: 0 })
+    const handleMouseLeave = () => {
+      gsap.to(el.querySelector("img"), {
+        scale: 1,
+        duration: 0.2,
+        ease: "power2.out",
+      })
+      if (tooltip) {
+        gsap.to(tooltip, {
+          opacity: 0,
+          y: 5,
+          scale: 0.9,
+          duration: 0.15,
+          ease: "power2.in",
+        })
+      }
     }
 
-    const visualsEls = document.querySelectorAll(".visual")
+    el.addEventListener("mouseenter", handleMouseEnter)
+    el.addEventListener("mouseleave", handleMouseLeave)
+    el._gsapHandlers = { handleMouseEnter, handleMouseLeave }
+  })
+
+  const triggers = []
+  const cards = document.querySelectorAll(".project-card")
+  cards.forEach((card, index) => {
+    const fromX = index % 2 === 0 ? -100 : 100
+    const animation = gsap.fromTo(
+      card,
+      { x: fromX, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 0.8,
+        delay: 0.1 + index * 0.1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: card,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      }
+    )
+    triggers.push(animation.scrollTrigger)
+  })
+
+  return () => {
     visualsEls.forEach((el) => {
-      const handleMouseEnter = () => {
-        gsap.to(el, {
-          scale: 1.05,
-          duration: 0.3,
-          ease: "power2.out",
-        })
+      if (el._gsapHandlers) {
+        el.removeEventListener("mouseenter", el._gsapHandlers.handleMouseEnter)
+        el.removeEventListener("mouseleave", el._gsapHandlers.handleMouseLeave)
       }
-      const handleMouseLeave = () => {
-        gsap.to(el, {
-          scale: 1,
-          duration: 0.3,
-          ease: "power2.out",
-        })
-      }
-      el.addEventListener("mouseenter", handleMouseEnter)
-      el.addEventListener("mouseleave", handleMouseLeave)
-      el._gsapHandlers = { handleMouseEnter, handleMouseLeave }
     })
-
-    const iconElements = document.querySelectorAll(".project-icon")
     iconElements.forEach((el) => {
-      const tooltip = el.querySelector(".custom-tooltip")
-
-      const handleMouseEnter = () => {
-        gsap.to(el.querySelector("img"), {
-          scale: 1.15,
-          duration: 0.2,
-          ease: "power2.out",
-        })
-        if (tooltip) {
-          gsap.fromTo(tooltip,
-            { opacity: 0, y: 5, scale: 0.9 },
-            { opacity: 1, y: 0, scale: 1, duration: 0.2, ease: "power2.out" }
-          )
-        }
+      if (el._gsapHandlers) {
+        el.removeEventListener("mouseenter", el._gsapHandlers.handleMouseEnter)
+        el.removeEventListener("mouseleave", el._gsapHandlers.handleMouseLeave)
       }
-
-      const handleMouseLeave = () => {
-        gsap.to(el.querySelector("img"), {
-          scale: 1,
-          duration: 0.2,
-          ease: "power2.out",
-        })
-        if (tooltip) {
-          gsap.to(tooltip, {
-            opacity: 0,
-            y: 5,
-            scale: 0.9,
-            duration: 0.15,
-            ease: "power2.in"
-          })
-        }
-      }
-
-      el.addEventListener("mouseenter", handleMouseEnter)
-      el.addEventListener("mouseleave", handleMouseLeave)
-      el._gsapHandlers = { handleMouseEnter, handleMouseLeave }
     })
+    triggers.forEach((trigger) => trigger?.kill())
+  }
+}, []) // runs only once
 
-    // SCROLL ANIMATION FOR EACH CARD
-    const cards = document.querySelectorAll(".project-card")
-    cards.forEach((card, index) => {
-      const fromX = index % 2 === 0 ? -100 : 100
-      gsap.fromTo(
-        card,
-        { x: fromX, opacity: 0 },
-        {
-          x: 0,
-          opacity: 1,
-          duration: 0.8,
-          delay: 0.1 + index * 0.1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: card,
-            start: "top 80%",
-            toggleActions: "play none none none",
-          },
-        }
-      )
-    })
+// 🔁 Modal-only logic: watch `showModal` changes
+useEffect(() => {
+  if (showModal && modalRef.current) {
+    gsap.fromTo(
+      modalRef.current,
+      { y: 40, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }
+    )
+  }
 
-    return () => {
-      visualsEls.forEach((el) => {
-        if (el._gsapHandlers) {
-          el.removeEventListener("mouseenter", el._gsapHandlers.handleMouseEnter)
-          el.removeEventListener("mouseleave", el._gsapHandlers.handleMouseLeave)
-        }
-      })
-      iconElements.forEach((el) => {
-        if (el._gsapHandlers) {
-          el.removeEventListener("mouseenter", el._gsapHandlers.handleMouseEnter)
-          el.removeEventListener("mouseleave", el._gsapHandlers.handleMouseLeave)
-        }
-      })
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-    }
-  }, [showModal])
+  if (showModal) {
+    setZoomLevel(1)
+    setPanPosition({ x: 0, y: 0 })
+  }
+}, [showModal])
 
   return (
     <section id="projects" className="bg-main text-black px-4 sm:px-8 lg:px-36 py-10 pt-16 sm:pt-32">
@@ -309,7 +314,7 @@ const Projects = () => {
             <img
               src={dickscall}
               alt="Jones Challenge Fullscreen UI"
-              className="w-full h-auto object-cover rounded-lg"
+              className="w-full max-w-[400px] sm:max-w-[500px] md:max-w-[550px] lg:max-w-[900px] h-auto object-cover rounded-lg mx-auto"
             />
           </div>
         </div>
