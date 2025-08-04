@@ -103,8 +103,8 @@ export const picture = Picture
 import Guitar from "/assets/hobbies/guitar.jpg"
 export const guitar = Guitar
 
-import Books from "/assets/hobbies/books.jpg"
-export const books = Books
+import Drawing from "/assets/hobbies/drawing.png"
+export const drawing = Drawing
 
 import Skateboard from "/assets/hobbies/skateboard.jpg"
 export const skateboard = Skateboard
