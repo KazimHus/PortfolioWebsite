@@ -101,7 +101,7 @@ export const projects = [
       "Implemented enemy AI, player animations, and collision mechanics using Unity’s physics engine."
     ],
     personal: [
-      "I've loved video games since I was a kid my first console was the VTech V-Smile. ",
+      "I've loved video games since I was a kid, my first console was the VTech V-Smile. ",
       "I sourced assets from Itch.io and even made sound effects myself when I couldn’t find the right ones.",
       "It was a fun project and I plan to make an even better game in the future."
     ]
@@ -127,8 +127,8 @@ export const projects = [
       "Utilized yt-dlp for scraping, FFmpeg for editing, and the YouTube API for automated uploads."
     ],
     personal: [
-      "So I built this project to test how easily I could repurpose existing videos and publish clips.",
-      "I’m still refining the pipeline as I haven’t gained many views yet."
+      "I built this project to test how easily I could repurpose existing videos and publish clips.",
+      "I’m currently refining the pipeline to improve engagement and reach."
     ]
   },
   {
@@ -140,7 +140,7 @@ export const projects = [
       "Smoothed noisy signals and used the Gemini API to estimate heart rate and respond to user queries."
     ],
     personal: [
-      "I built it because I thought it would be medically useful, and I also wanted to monitor my heartbeat while playing horror games."
+      "I built it because I believed it would be medically useful, and I also wanted to monitor my heartbeat while playing horror games."
     ]
   },
   {
