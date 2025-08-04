@@ -90,7 +90,7 @@ const Navbar = () => {
       }
 
       if (link === 'hobbies') {
-        offset = 120 // scroll higher up for these sections
+        offset = 100 // scroll higher up for these sections
       }
 
       if (link === 'contact') {
