@@ -90,7 +90,7 @@ const Navbar = () => {
       }
 
       if (link === 'hobbies') {
-        offset = 150 // scroll higher up for these sections
+        offset = 120 // scroll higher up for these sections
       }
 
       if (link === 'contact') {
@@ -98,11 +98,11 @@ const Navbar = () => {
       }
 
       if (link === 'education') {
-        offset = 20 // scroll higher up for these sections
+        offset = 10 // scroll higher up for these sections
       }
 
       if (link === 'projects') {
-        offset = 50 // scroll higher up for these sections
+        offset = 30 // scroll higher up for these sections
       }
       
       const targetPosition = target.offsetTop - offset
