@@ -44,7 +44,7 @@ const Hobbies = () => {
   return (
     <section
       id="hobbies"
-      className="bg-main text-main px-10 md:px-20 py-16 xl:py-28 flex items-center justify-center -mt-20 lg:-mt-40 xl:mt-0"
+      className="bg-main text-main px-10 md:px-20 py-16 xl:py-28 flex items-center justify-center -mt-20 lg:-mt-40 xl:-mt-40"
     >
       <div className="relative w-full max-w-7xl flex flex-col md:flex-row gap-8 md:gap-16 items-center">
         {/* Left Side - Text */}
