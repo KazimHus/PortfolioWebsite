@@ -26,10 +26,10 @@ const About = () => {
       gsap.to([guitarRef.current, helloRef.current, nameRef.current, titleRef.current, locationRef.current, buttonsRef.current], {
         opacity: 1,
         y: 0,
-        duration: 0.9,
+        duration: 0.7,
         ease: "power2.out",
-        stagger: 0.3,
-        delay: 0.3
+        stagger: 0.2,
+        delay: 0.2
       })
 
     }, containerRef)
@@ -94,7 +94,7 @@ const About = () => {
           <div ref={buttonsRef} className="flex justify-center lg:justify-start">
             <div className="flex flex-row gap-4 items-center">
               <a
-                href="/assets/pdfs/Mirza_Resume.pdf"
+                href="/assets/pdfs/Mirza_K_Husain_M.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-bright-orange border-2 text-white font-bold py-3 px-6 rounded-full text-base shadow-md hover:bg-orange-500 transition"
