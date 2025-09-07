@@ -49,7 +49,7 @@ const Education = () => {
           opacity: 1,
           y: 0,
           duration: 1,
-          delay: 0.5,
+          delay: 0.3,
           ease: 'power2.out',
           scrollTrigger: {
             trigger: courseworkRef.current,
@@ -71,11 +71,11 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="flex flex-col items-center justify-center text-black bg-main py-10 px-6 pt-36"
+      className="flex flex-col items-center justify-center text-neon-green bg-main sm:-mt-0 -mt-10 py-20 pt-32 px-6 sm:pt-52"
     >
       {/* Header */}
       <div className="text-center mb-12">
-        <h1 className="text-6xl md:text-8xl pirata-one-regular">{data.name[0]}</h1>
+        <h1 className="text-6xl md:text-7xl lg:text-8xl pirata-one-regular" style={{ color: '#AA0000' }} >{data.name[0]}</h1>
         <div className="flex items-center justify-center gap-3 mt-4">
           <p className="text-lg md:text-xl font-semibold text-bright-orange texturina-text-bold">
             {data.date[0]}

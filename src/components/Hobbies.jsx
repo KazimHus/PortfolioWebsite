@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import {
   guitar,
-  skateboard,
   drawing,
   python,
   cplusplus,
@@ -44,19 +43,45 @@ const Hobbies = () => {
   return (
     <section
       id="hobbies"
-      className="bg-main text-main px-10 md:px-20 py-16 xl:py-28 flex items-center justify-center -mt-20 sm:-mt-0"
+      className="bg-main text-main px-10 md:px-20 py-10 md:py-20 xl:py-28 flex items-center justify-center -mt-2 md:-mt-5 sm:-mt-0"
     >
-      <div className="relative w-full max-w-7xl flex flex-col md:flex-row gap-8 md:gap-16 items-center">
+      <div className="relative w-full max-w-7xl flex flex-col md:flex-row gap-8 md:gap-12 items-start">
         {/* Left Side - Text */}
-        <div className="flex-[1.7] flex flex-col items-start justify-center z-20 w-full md:w-auto">
-          <h2 className="text-4xl md:text-6xl gugi-regular font-bold text-black mb-6 pl-6">About Me</h2>
+        <div className="flex-[2] flex flex-col items-start justify-center z-20 w-full md:w-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl dm-serif-text-regular font-bold text-main mb-2 sm:mb-6 pl-6">About Me</h2>
           <p className="text-base md:text-xl gugi-regular text-left max-w-4xl text-black rounded-xl p-6 space-y-6 w-full">
             I'm a curious and hands-on learner who enjoys exploring new skills and ideas. 
             That mindset drives both my projects and personal interests.
             <br /><br />
-            Outside of tech, I play guitar, draw, read, skateboard, hike, and go to the gym. 
+
+            {/* ✅ Current Projects with BIG green dots */}
+            Current projects I’m working on:
+            <ul className="space-y-1 mt-0">
+              <li className="relative pl-8 before:content-['•'] 
+               before:absolute before:left-0 
+               before:top-1/2 before:-translate-y-1/2 
+               before:text-green-600 before:text-4xl md:before:text-6xl">
+                Gpu sharing across computers
+              </li>
+              <li className="relative pl-8 before:content-['•'] 
+               before:absolute before:left-0 
+               before:top-1/2 before:-translate-y-1/2 
+               before:text-green-600 before:text-4xl md:before:text-6xl">
+                LLM training for anomalies in computer
+              </li>
+              <li className="relative pl-8 before:content-['•'] 
+               before:absolute before:left-0 
+               before:top-1/2 before:-translate-y-1/2 
+               before:text-green-600 before:text-4xl md:before:text-6xl">
+                Increase productivity app
+              </li>
+            </ul>
+            <br />
+
+            Outside of tech, I play guitar, draw, read and much more. 
             This mix of creativity and persistence shapes how I approach both work and life. 
             <br /><br />
+            
             My current day to day tech stack is:
             <div ref={techStackRef} className="flex flex-wrap gap-6 mt-4">
               {[ 
@@ -84,15 +109,18 @@ const Hobbies = () => {
         </div>
 
         {/* Right Side - Image Grid */}
-        <div className="flex-[1.3] grid grid-cols-3 gap-1 md:gap-4 h-[300px] md:h-[400px] w-[320px] md:w-[200px]">
-          {[skateboard, guitar, drawing].map((src, idx) => (
-            <img
-              key={idx}
-              src={src}
-              alt="Hobby"
-              className="w-[150px] h-[250px] md:h-[400px] object-cover rounded-xl shadow-lg"
-            />
-          ))}
+        {/* Right Side - Image Grid */}
+      <div className="flex-[1] flex justify-center md:mt-24 w-full">
+          <div className="grid grid-cols-2 gap-2 md:gap-3 max-w-[320px] sm:max-w-[400px] mx-auto">
+            {[guitar, drawing].map((src, idx) => (
+              <img
+                key={idx}
+                src={src}
+                alt="Hobby"
+                className="w-[140px] sm:w-[180px] h-[270px] sm:h-[400px] object-cover rounded-xl shadow-lg"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -98,7 +98,7 @@ const Navbar = () => {
       }
 
       if (link === 'education') {
-        offset = 10 // scroll higher up for these sections
+        offset = 5 // scroll higher up for these sections
       }
 
       if (link === 'projects') {

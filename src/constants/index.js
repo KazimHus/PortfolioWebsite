@@ -3,16 +3,16 @@ import { dickscall } from "../utils";
 export const Experience = [
   {
     id: 1,
-    date: ["July 2025 – Current"],
+    date: ["July 2025 – August 2025"],
     title: ["Web Developer - Internship"],
     company: ["Bilimetrix"],
     stack: ["C#", "HTML5", "ASP.NET", "MySQL", "Git"],
     description: [
-      "Redesigning the website layout and introduced intuitive visuals to enhance usability and streamline navigation."
+      "Enhanced a diagnostic platform with real-time updates, automated workflows, and interactive visualizations, focusing on performance, reliability, and accessibility across clinics."
     ],
     personal: [
-      "We work under Dr. Richard Wennberg, who is highly knowledgeable and provides detailed feedback on the layout and functionality related to Kernicterus and BiliPics.",
-      "unit tests and proper branching are a big deal"
+      "We worked under Dr. Richard Wennberg, who is highly knowledgeable and provides detailed feedback on the layout and functionality related to Kernicterus and BiliPics.",
+      "unit tests and proper branching were a big deal"
     ]
   },
   {

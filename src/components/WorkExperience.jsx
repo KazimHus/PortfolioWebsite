@@ -48,13 +48,13 @@ const WorkExperience = () => {
   return (
     <section
       id="workexperience"
-      className="text-black bg-main px-14 lg:px-5 sm:pt-36 pt-28 pb-20"
+      className="text-black bg-main px-14 lg:px-5 sm:pt-36 pt-28 pb-20 sm:-mt-0 -mt-2"
     >
       <div className="text-center mb-24 sm:mb-32">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl gugi-regular text-main">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl dm-serif-text-regular-italic text-main">
           Work Experience
         </h1>
-        <div className="w-16 sm:w-24 h-1 bg-bright-orange mx-auto mt-4 mb-6 rounded-full" />
+        <div className="w-14 sm:w-24 h-1 bg-bright-orange mx-auto mt-4 mb-6 rounded-full" />
       </div>
 
       <div className="flex flex-col items-center gap-16">
@@ -64,24 +64,28 @@ const WorkExperience = () => {
             ref={(el) => (jobRefs.current[index] = el)}
             className="transition duration-500 w-full max-w-2xl text-left"
           >
-            <p className="text-base text-bright-orange font-semibold mb-2 gugi-regular">
+            <p className="text-sm sm:text-base text-bright-orange font-semibold mb-2 gugi-regular">
               {job.date[0]}
             </p>
-            <h2 className="text-2xl gugi-regular">{job.title[0]}</h2>
-            <h3 className="text-2xl mb-4 gugi-regular">{job.company[0]}</h3>
+            <h2 className="text-xl sm:text-2xl dm-serif-text-regular">
+              {job.title[0]}
+            </h2>
+            <h3 className="text-xl sm:text-2xl mb-4 dm-serif-text-regular">
+              {job.company[0]}
+            </h3>
 
             <div className="flex flex-wrap gap-2 mb-4">
               {job.stack?.map((tech, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1 text-base techno-text text-main bg-accent/70 border border-accent/40 rounded-full"
+                  className="px-3 py-1 text-sm sm:text-base techno-text text-main bg-accent/70 border border-accent/40 rounded-full"
                 >
                   {tech}
                 </span>
               ))}
             </div>
 
-            <div className="space-y-2 text-base texturina-text-bold">
+            <div className="space-y-2 text-sm sm:text-base texturina-text-bold">
               {job.description.map((point, i) => (
                 <p key={i}>{point}</p>
               ))}
@@ -89,7 +93,7 @@ const WorkExperience = () => {
 
             {job.personal && (
               <div className="mt-4">
-                <ul className="list-disc list-inside space-y-2 text-sm texturina-text">
+                <ul className="list-disc list-inside space-y-2 text-xs sm:text-sm texturina-text">
                   {job.personal.map((point, i) => (
                     <li key={i} className="-indent-5 pl-5">
                       {point}

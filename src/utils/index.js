@@ -7,6 +7,10 @@ export const profileimg2 = Profileimg2
 import Degree from "/assets/images/degree.png"
 export const degree = Degree
 
+import Guitardrawing from "/assets/images/guitardrawing.png"
+export const guitardrawing = Guitardrawing 
+
+
 
 
 import Csharp from "/assets/icons/csharp.svg"

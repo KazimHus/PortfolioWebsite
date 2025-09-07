@@ -1,45 +1,84 @@
+import { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
 import {
   pin,
-  profileimg2,  
+  guitardrawing
 } from '../utils'
 
 const About = () => {
-  
+  const containerRef = useRef(null)
+  const guitarRef = useRef(null)
+  const helloRef = useRef(null)
+  const nameRef = useRef(null)
+  const titleRef = useRef(null)
+  const locationRef = useRef(null)
+  const buttonsRef = useRef(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Set initial states
+      gsap.set([guitarRef.current, helloRef.current, nameRef.current, titleRef.current, locationRef.current, buttonsRef.current], {
+        opacity: 0,
+        y: 100
+      })
+
+      // Stagger all elements together
+      gsap.to([guitarRef.current, helloRef.current, nameRef.current, titleRef.current, locationRef.current, buttonsRef.current], {
+        opacity: 1,
+        y: 0,
+        duration: 0.9,
+        ease: "power2.out",
+        stagger: 0.3,
+        delay: 0.3
+      })
+
+    }, containerRef)
+
+    return () => ctx.revert()
+  }, [])
+
   return (
     <section
+      ref={containerRef}
       id="about"
-      className="text-main bg-main min-h-screen flex items-center justify-center px-4 md:px-10 lg:-mt-2 md:mt-5 "
+      className="text-main bg-main min-h-screen flex items-center justify-center px-4 md:px-10 lg:-mt-2 md:mt-10 sm:pb-0 pb-20"
     >
-      <div className="w-full max-w-[1000px] flex flex-col lg:flex-row items-center gap-14 lg:gap-36 lg:ml-16">
+      <div className="w-full max-w-[1200px] flex flex-col lg:flex-row items-center gap-14 lg:gap-36 lg:ml-16">
 
-        {/* Profile Image with Decorative Square */}
-        <div className="relative flex-shrink-0">
-          {/* Decorative square behind - positioned for left bottom corner */}
-          <div 
-            className="absolute w-48 h-48 md:w-64 md:h-80 rounded-2xl bottom-3 right-4 z-0"
-            style={{ backgroundColor: '#d17402' }}
-          ></div>
-          {/* Profile image */}
+        {/* Guitar Drawing */}
+        <div ref={guitarRef} className="relative flex-shrink-0">
           <img 
-            src={profileimg2} 
-            alt="Mirza Kazim Husain"
-            className="relative w-48 h-48 md:w-64 md:h-80 object-cover rounded-2xl z-10 shadow-lg"
+            src={guitardrawing} 
+            alt="Guitar Drawing"
+            className="relative w-72 h-96 md:w-[30rem] md:h-[35rem] object-contain -mb-24 sm:mb-0"
           />
         </div>
 
         {/* Header Info and Buttons */}
         <div className="flex flex-col lg:text-left">
           <div>
-            <div className="text-left px-8 py-2 text-lg md:text-2xl techno-text text-main bg-accent/70 border border-accent/40 rounded-full inline-block mb-4">
+            <div 
+              ref={helloRef}
+              className="text-left px-8 py-2 text-lg md:text-2xl dm-serif-text-regular text-main bg-accent/70 border border-accent/40 rounded-full inline-block mb-4"
+            >
               Hello! I am
             </div>
-            <h1 className="text-center lg:text-left text-4xl md:text-5xl lg:text-6xl gugi-regular leading-tight">
+            <h1 
+              ref={nameRef}
+              className="text-center lg:text-left text-4xl md:text-5xl lg:text-6xl dm-serif-text-regular leading-tight"
+            >
               Mirza Kazim Husain,
             </h1>
-            <h1 className="text-center lg:text-left text-3xl md:text-4xl lg:text-5xl gugi-regular mt-6 leading-tight">
+            <h1 
+              ref={titleRef}
+              className="text-center lg:text-left text-3xl md:text-4xl lg:text-5xl dm-serif-text-regular-italic  mt-6 leading-tight"
+            >
               Software Engineer
             </h1>
-            <div className="flex items-center justify-center lg:justify-start mt-6 mb-12">
+            <div 
+              ref={locationRef}
+              className="flex items-center justify-center lg:justify-start mt-6 mb-12"
+            >
               <img 
                 src={pin} 
                 alt="Location pin"
@@ -52,7 +91,7 @@ const About = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex justify-center lg:justify-start">
+          <div ref={buttonsRef} className="flex justify-center lg:justify-start">
             <div className="flex flex-row gap-4 items-center">
               <a
                 href="/assets/pdfs/Mirza_Resume.pdf"
@@ -71,10 +110,8 @@ const About = () => {
               </a>
             </div>
           </div>
-
         </div>
 
-        
       </div>
     </section>
   );

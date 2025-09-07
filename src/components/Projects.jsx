@@ -160,15 +160,15 @@ useEffect(() => {
 }, [showModal])
 
   return (
-    <section id="projects" className="bg-main text-black px-4 sm:px-8 lg:px-36 py-10 pt-28 sm:pt-32">
+    <section id="projects" className="bg-main text-black px-4 sm:px-8 lg:px-36 py-10 pt-24 sm:pt-32 sm:-mt-0 -mt-2">
       <div className="text-center mb-1 sm:mb-12">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl gugi-regular text-main">Personal Projects</h1>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl dm-serif-text-regular text-main">Personal Projects</h1>
         <div className="w-16 sm:w-24 h-1 bg-bright-orange mx-auto mt-4 mb-6 rounded-full" />
         <a
           href="https://github.com/KazimHus?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
-          className="texturina-text-bold text-base sm:text-lg text-bright-orange hover:underline transition"
+          className="dm-serif-text-regular-italic text-base sm:text-lg text-bright-orange hover:underline transition"
         >
           View other projects on my GitHub ↗
         </a>
@@ -190,7 +190,7 @@ useEffect(() => {
                 </div>
 
                 <div className="w-full lg:w-[50%] space-y-3 sm:space-y-5">
-                  <h2 className="text-xl sm:text-2xl lg:text-3xl gugi-regular font-bold">{project.title}</h2>
+                  <h2 className="text-xl sm:text-2xl lg:text-3xl dm-serif-text-regular font-bold">{project.title}</h2>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {project.stack.map((tech, i) => (
                       <span key={i} className="px-2 sm:px-3 py-1 text-sm sm:text-base techno-text text-main bg-accent/70 rounded-full border border-accent/40">
