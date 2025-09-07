@@ -75,17 +75,21 @@ export const university = [
     clubs: ["Member of the Chess and Mens Soccer club"],
     competitions: ["Participated in numerous intramural sport Competitions, serving multiple times as Captain for the volleyball team"],
     
-
-    c1: ["Machine Learning", "Python"],
+   c1: ["Machine Learning", "Python"],
     c2: ["Data Structures", "C++"],
-    c3: ["Mobile Software Design", "Android Studio", "Kotlin"],
+    c3: ["Mobile Software Development", "Android Studio", "Kotlin"],
     c4: ["Object-Oriented Development", "C++", "C#"],
     c5: ["Design & Analysis of Algorithms", "Java"],
     c6: ["Big Data Analytics", "Java", "Python", "Hadoop", "Docker", "Hive", "Spark", "AWS (EC2, S3)"],
-    c7: ["Technical Communication & Project Management", "Agile", "Scrum", "Sprints", "Modeling"],
-    c8: ["Calculus I, II, III", "Limits", "Derivatives", "Integrals", "Multivariable Calculus"],
-    c9: ["Probability and Statistics", "R"],
-    c10: ["Advanced Mathematics", "Logic", "Proofs", "Set Theory"]
+    c7: ["Computer Systems", "C++"],
+    c8: ["Computer Organization", "Assembly"],
+    c9: ["Databases", "SQL"],
+    c10: ["Computer Graphics", "OpenGL, Texture Mapping"],
+    c11: ["Languages & Computation", "Python"],
+    c12: ["Technical Communication & Project Management", "Agile", "Scrum", "Sprints", "Modeling"],
+    c13: ["Calculus I, II, III", "Limits, Derivatives, Integrals, Multivariable Calculus"],
+    c14: ["Probability and Statistics", "R"],
+    c15: ["Advanced Mathematics", "Logic, Proofs, Set Theory"] 
   }
 ];
 
