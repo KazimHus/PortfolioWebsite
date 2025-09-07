@@ -275,7 +275,7 @@ useEffect(() => {
 
                   </div>
 
-                  <div className="space-y-2 text-sm sm:text-base texturina-text-bold">
+                  <div className="space-y-2 text-sm sm:text-base dm-serif-text-regular">
                     {project.description.map((line, i) => (
                       <p key={i}>{line}</p>
                     ))}

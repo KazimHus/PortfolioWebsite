@@ -49,7 +49,7 @@ const Hobbies = () => {
         {/* Left Side - Text */}
         <div className="flex-[2] flex flex-col items-start justify-center z-20 w-full md:w-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl dm-serif-text-regular font-bold text-main mb-2 sm:mb-6 pl-6">About Me</h2>
-          <p className="text-base md:text-xl gugi-regular text-left max-w-4xl text-black rounded-xl p-6 space-y-6 w-full">
+          <p className="text-base md:text-xl dm-serif-text-regular text-left max-w-4xl text-black rounded-xl p-6 space-y-6 w-full">
             I'm a curious and hands-on learner who enjoys exploring new skills and ideas. 
             That mindset drives both my projects and personal interests.
             <br /><br />
@@ -61,13 +61,7 @@ const Hobbies = () => {
                before:absolute before:left-0 
                before:top-1/2 before:-translate-y-1/2 
                before:text-green-600 before:text-4xl md:before:text-6xl">
-                Gpu sharing across computers
-              </li>
-              <li className="relative pl-8 before:content-['•'] 
-               before:absolute before:left-0 
-               before:top-1/2 before:-translate-y-1/2 
-               before:text-green-600 before:text-4xl md:before:text-6xl">
-                LLM training for anomalies
+                Gpu sharing
               </li>
               <li className="relative pl-8 before:content-['•'] 
                before:absolute before:left-0 

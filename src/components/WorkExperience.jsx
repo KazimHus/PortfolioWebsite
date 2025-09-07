@@ -85,7 +85,7 @@ const WorkExperience = () => {
               ))}
             </div>
 
-            <div className="space-y-2 text-sm sm:text-base texturina-text-bold">
+            <div className="space-y-2 text-sm sm:text-base dm-serif-text-regular">
               {job.description.map((point, i) => (
                 <p key={i}>{point}</p>
               ))}
