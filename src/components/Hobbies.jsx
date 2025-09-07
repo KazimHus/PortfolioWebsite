@@ -67,7 +67,7 @@ const Hobbies = () => {
                before:absolute before:left-0 
                before:top-1/2 before:-translate-y-1/2 
                before:text-green-600 before:text-4xl md:before:text-6xl">
-                LLM training for anomalies in computer
+                LLM training for anomalies
               </li>
               <li className="relative pl-8 before:content-['•'] 
                before:absolute before:left-0 
