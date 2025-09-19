@@ -94,7 +94,7 @@ const About = () => {
           <div ref={buttonsRef} className="flex justify-center lg:justify-start">
             <div className="flex flex-row gap-4 items-center">
               <a
-                href="/assets/pdfs/Mirza_K_Husain_M.pdf"
+                href="/assets/pdfs/Mirza_Husain_Resume_M.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-bright-orange border-2 text-white font-bold py-3 px-6 rounded-full text-base shadow-md hover:bg-orange-500 transition"
